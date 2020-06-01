@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes move{
+            0%{}
+            100%{
+                transform: translate(1000px);
+            }
+
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background: cyan;
+            /* animation-name: move;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+            animation-delay: 0s; */
+            /* animation: move 2s  delay iteration-count direction fill-mode; */
+            animation: move 3s ease 1s infinite  normal forwards;
+        }
+        div:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <!-- animation: 动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 动画其实或结束状态 -->
+
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .point {
+            position: relative;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: cyan;
+            top: 100px;
+            left: 100px;
+        }
+
+        div[class^="ripple"] {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px cyan;
+            border-radius: 50%;
+            animation: spread 1.5s ease-in-out infinite;
+        }
+
+        div .ripple2 {
+            animation-delay: 0.2s;
+        }
+
+        div .ripple3{
+            animation-delay: 0.4s;
+        }
+
+        div .ripple4 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes spread {
+            0%{
+
+            }
+            25%{
+                width: 20px;
+                height: 20px;
+                opacity: 0.5;
+            }
+            50%{
+                width: 40px;
+                height: 40px;
+                opacity: 0.7;
+            }
+            75%{
+                width: 80px;
+                height: 80px;
+                opacity: 1;
+            }
+            100%{
+                width: 160px;
+                height: 160px;
+                opacity: 0;
+            }
+
+        }
+
+        .aa{
+            background: pink;
+            width: 0;
+            height: 100px;
+            animation: aa 2s cubic-bezier(0.6, -0.28, 0.735, 0.045)  forwards;
+        }
+
+        @keyframes aa{
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 200px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            background-color: springgreen;
+            animation: step 1.5s steps(10) forwards;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        @keyframes step {
+            0% {
+                width: 0;
+            }
+            100%{
+                width: 160px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="point">
+        <div class="ripple1"></div>
+        <div class="ripple2"></div>
+        <div class="ripple3"></div>
+        <div class="ripple4"></div>
+    </div>
+
+    <div class="aa"></div>
+
+    <p>我在珠穆朗玛峰等你!</p>
+</body>
+</html>
